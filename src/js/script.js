@@ -1,7 +1,14 @@
 const display = document.getElementById('display');
 
 const appendToDisplay = (input) => {
-    display.value += input; 
+    const lastChar = display.value.slice(-1);
+    const operators = ['+', '-', '*', '/'];
+    
+    if (operators.includes(lastChar) && operators.includes(input)) {
+        display.value = display.value.slice(0, -1) + input;
+    } else {
+        display.value += input;
+    }
 };
 
 
