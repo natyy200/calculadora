@@ -1,6 +1,11 @@
+// música
+const music = new Audio("./src/assets/sound/click.wav");
+music.volume = 0.2;
+
 const display = document.getElementById('display');
 
 const appendToDisplay = (input) => {
+    music.play();
     const lastChar = display.value.slice(-1);
     const operators = ['+', '-', '*', '/'];
     
@@ -10,7 +15,6 @@ const appendToDisplay = (input) => {
         display.value += input;
     }
 };
-
 
 const clearDisplay = () => {
     display.value = '';
