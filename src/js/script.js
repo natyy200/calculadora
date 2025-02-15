@@ -1,6 +1,6 @@
 // música
 const music = new Audio("./src/assets/sound/click.wav");
-music.volume = 0.5;
+music.volume = 1;
 
 const display = document.getElementById('display');
 
